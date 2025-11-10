@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MiSitio - Contacto</title>
+  <meta name="description" content="Formulario de contacto accesible y demostración de metadatos.">
+  <meta name="author" content="Tu Nombre">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><img src="img/logo.png" alt="Logotipo MiSitio"></div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="gallery.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card animated" aria-labelledby="contTitle">
+        <h1 id="contTitle">Contacto</h1>
+        <p class="lead">Formulario accesible. Los datos se envían a /submit (simulado).</p>
+
+        <form action="/submit" method="post" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="topic">Tema</label>
+            <select id="topic" name="topic" required>
+              <option value="">Seleccione...</option>
+              <option value="consulta">Consulta</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+          </div>
+          <div style="display:flex;gap:.6rem;align-items:center">
+            <button class="btn" type="submit">Enviar</button>
+            <small style="color:#666">Los datos no se envían realmente (demo).</small>
+          </div>
+        </form>
+
+      </section>
+
+      <aside class="card" aria-labelledby="metaTitle">
+        <h3 id="metaTitle">Metadatos</h3>
+        <p>Esta página incluye meta descripción, autor y favicon. Útil para SEO y navegación.</p>
+        <figure>
+          <img src="img/favicon.png" alt="Favicon ejemplo" width="64" height="64">
+          <figcaption>Favicon (PNG) usado como ejemplo.</figcaption>
+        </figure>
+      </aside>
+    </main>
+
+    <footer class="footer card">
+      <p>MiSitio • Formulario accesible • &copy; 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
