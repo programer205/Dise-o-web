@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MiSitio - Inicio</title>
+  <meta name="description" content="Sitio demostrativo responsivo con ejemplos de HTML5 y CSS3.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="img/logo.png" alt="logo">
+        <div>
+          <div style="font-weight:700">MiSitio</div>
+          <small style="color:#6ae3f8">Ejemplo responsivo</small>
+        </div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="gallery.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card animated" aria-labelledby="welcome">
+        <h1 id="welcome">Bienvenido a MiSitio</h1>
+        <p class="lead">Demostración de técnicas avanzadas de HTML5 y CSS3: imágenes adaptativas, <code>&lt;figure&gt;</code>, <code>&lt;map&gt;</code>, SVG, formularios, tablas y animaciones.</p>
+
+        <figure>
+          <picture>
+            <source srcset="images/banner.png" media="(max-width:600px)">
+            <img src="img/banner.png" alt="Banner principal" class="transition">
+          </picture>
+          <figcaption>Banner adaptativo que usa &lt;picture&gt; y se escala según pantalla.</figcaption>
+        </figure>
+
+        <h2>SVG embebido</h2>
+        <figure>
+          <object type="image/svg+xml" data="img/art.png" aria-label="Ilustración SVG" class="transition" style="width:100%;height:auto;"></object>
+          <figcaption>Ejemplo de SVG externo que es escalable y puede animarse con CSS.</figcaption>
+        </figure>
+
+      </section>
+
+      <aside class="card" aria-labelledby="sideTitle">
+        <h3 id="sideTitle">Imagen interactiva</h3>
+        <p>Haz clic en las áreas del mapa de imagen para navegar.</p>
+        <div class="image-map" aria-hidden="false">
+          <img src="img/interactive.png" alt="Imagen interactiva" usemap="#site-map" class="transition">
+          <map name="site-map" id="site-map">
+            <area shape="rect" coords="10,10,170,90" href="gallery.html" alt="Ir a Galería">
+            <area shape="rect" coords="180,10,350,90" href="contacto.html" alt="Ir a Contacto">
+          </map>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer card">
+      <p>Proyecto de ejemplo • HTML5 &amp; CSS3 • <a href="gallery.html">Ver galería</a></p>
+    </footer>
+  </div>
+</body>
+</html>
