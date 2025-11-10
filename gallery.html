@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MiSitio - Galería</title>
+  <meta name="description" content="Galería de imágenes adaptativas y ejemplo de tabla.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><img src="img/logo.png" alt="Logotipo MiSitio"></div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="gallery.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card animated" aria-labelledby="galTitle">
+        <h1 id="galTitle">Galería y recursos</h1>
+        <p class="lead">Imágenes adaptativas y una tabla de ejemplo con estilos personalizados.</p>
+
+        <figure>
+          <picture>
+            <source media="(min-width:801px)" srcset="img/banner.png 1x">
+            <source media="(max-width:800px)" srcset="img/banner.png 1x">
+            <img src="img/banner.png" alt="Imagen de ejemplo adaptativa">
+          </picture>
+          <figcaption>Uso de &lt;picture&gt; y <code>srcset</code> para imágenes adaptativas.</figcaption>
+        </figure>
+
+        <h2>Tabla de datos</h2>
+        <table class="card" aria-describedby="tableDesc">
+          <caption id="tableDesc" style="text-align:left;font-weight:700;margin-bottom:.5rem">Resumen de elementos</caption>
+          <thead><tr><th>Elemento</th><th>Descripción</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>&lt;figure&gt;</td><td>Agrupa imagen y leyenda</td><td>Usado</td></tr>
+            <tr><td>&lt;picture&gt;</td><td>Imagen adaptativa</td><td>Usado</td></tr>
+            <tr><td>SVG</td><td>Gráfico escalable</td><td>Usado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Animaciones CSS</h2>
+        <p>Ejemplo de animación aplicada a un bloque:</p>
+        <div class="card" style="display:inline-block;padding:1rem;transition:transform .3s" tabindex="0">
+          Al pasar el cursor, este bloque se escala (transición).
+        </div>
+
+      </section>
+
+      <aside class="card" aria-labelledby="resourcesTitle">
+        <h3 id="resourcesTitle">Recursos</h3>
+        <ul>
+          <li><a href="images/art.svg">Descargar SVG</a></li>
+          <li><a href="index.html">Volver a inicio</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="footer card">
+      <p>MiSitio • Ejemplo educativo</p>
+    </footer>
+  </div>
+</body>
+</html>
